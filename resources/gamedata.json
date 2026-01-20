@@ -1,0 +1,148 @@
+ {
+        "rooms": [{
+            "id": "yard",
+            "name": "Yard",
+            "description": "A spacious yard with a beautiful garden.",
+            "connections": {
+                "south": "main_hall",
+                "southID": 1,
+                "north": "exit_gate",
+                "northID": 8,
+                "east": null,
+                "eastID": null,
+                "west": null,
+                "westID": null
+            },
+            "items": [null,null]
+        },
+        {
+            "id": "main_hall",
+            "name": "Main Hall",
+            "description": "The main hall of the fortress, grand and ornate.",
+            "connections": {
+                "north": "yard",
+                "northID": 0,
+                "east": "armory",
+                "eastID": 2,
+                "south": "library",
+                "southID": 3,
+                "west": "guard_room",
+                "westID": 4
+            },
+            "items": [null,null]
+        },
+        {
+            "id": "armory",
+            "name": "Armory",
+            "description": "A room filled with weapons and armor.",
+            "connections": {
+                "west": "main_hall",
+                "westID": 1,
+                "south": null,
+                "southID": null,
+                "east": null,
+                "eastID": null,
+                "north": null,
+                "northID": null
+            },
+            "items": [null,null]
+        },
+        {
+            "id": "library",
+            "name": "Library",
+            "description": "A quiet library filled with ancient books.",
+            "connections": {
+                "north": "main_hall",
+                "northID": 1,
+                "south": "dark_basement",
+                "southID": 5,
+                "east": null,
+                "eastID": null,
+                "west": null,
+                "westID": null
+            },
+            "items": [null,null]
+        },
+        {
+            "id": "guard_room",
+            "name": "Guard Room",
+            "description": "The room where the guards rest and plan.",
+            "connections": {
+                "east": "main_hall",
+                "eastID": 1,
+                "north": null,
+                "northID": null,
+                "south": null,
+                "southID": null,
+                "west": null,
+                "westID": null
+            },
+            "items": [null,null]
+        },
+        {
+            "id": "dark_basement",
+            "name": "Dark Basement",
+            "description": "A mysterious basement shrouded in darkness.",
+            "connections": {
+                "north": "library",
+                "northID": 3,
+                "south": "treasury",
+                "southID": 6,
+                "east": null,
+                "eastID": null,
+                "west": null,
+                "westID": null
+            },
+            "items": [null,null]
+        },
+        {
+            "id": "treasury",
+            "name": "Treasury",
+            "description": "The treasury filled with gold and jewels.",
+            "connections": {
+                "north": "dark_basement",
+                "northID": 5,
+                "south": "secret_chamber",
+                "southID": 7,
+                "east": null,
+                "eastID": null,
+                "west": null,
+                "westID": null
+            },
+            "items": [null,null]
+        },
+        {
+            "id": "secret_chamber",
+            "name": "Secret Chamber",
+            "description": "A hidden chamber with ancient artifacts.",
+            "connections": {
+                "north": "treasury",
+                "northID": 6,
+                "south": null,
+                "southID": null,
+                "east": null,
+                "eastID": null,
+                "west": null,
+                "westID": null
+            },
+            "items": [null,null]
+        },
+        {
+            "id": "exit_gate",
+            "name": "Exit Gate",
+            "description": "The grand exit gate of the fortress.",
+            "connections": {
+                "south": "yard",
+                "southID": 0,
+                "north": null,
+                "northID": null,
+                "east": null,
+                "eastID": null,
+                "west": null,
+                "westID": null
+            },
+            "items": [null,null]
+        }
+    ]
+
+    }

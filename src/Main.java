@@ -4,6 +4,7 @@ public class Main {
 //TODO dodelat celou hru
 
         Game game = new Game();
+        game.startGame();
 
     }
 }
