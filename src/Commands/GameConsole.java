@@ -23,6 +23,8 @@ public class GameConsole {
         commands.put("go", new GoCommand(player, roomManager));
         commands.put("exit", new StopCommand());
         commands.put("stats", new StatsCommand(player, inventory, roomManager));
+        commands.put("help", new HelpCommand());
+        commands.put("take", new TakeCommand(roomManager, inventory, player));
     }
 
     public void execute() {

@@ -5,9 +5,9 @@ import World.RoomManager;
 
 public class StatsCommand implements Command {
 
-    Inventory inventory;
-    Player player;
-    RoomManager roomManager;
+    private Inventory inventory;
+    private Player player;
+    private RoomManager roomManager;
 
     public StatsCommand(Player player, Inventory inventory, RoomManager roomManager) {
         this.inventory = inventory;
@@ -18,7 +18,7 @@ public class StatsCommand implements Command {
     @Override
     public String execute(String[] args) {
         return "Currently located at: " + player.getCurrentRoomName() + "\n" +
-                "Inventory: " + null + "\n" +
+                "Inventory: " + inventory + "\n" +
                 "-------------------------------------------------------------";
     }
 

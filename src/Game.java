@@ -2,6 +2,7 @@ import Commands.GameConsole;
 import Player.*;
 import Util.CompFunc;
 import World.GameMapLoader;
+import World.Item;
 
 public class Game {
 

@@ -17,7 +17,7 @@ public class Room {
     private String name;
     private String description;
     private Connections connections;
-    private List<Item> items;
+    private List<String> items;
 
 
 }

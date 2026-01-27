@@ -12,5 +12,6 @@ import java.util.List;
 @NoArgsConstructor
 public class RoomManager {
     private List<Room> rooms;
+    private List<Item> items;
 
 }
