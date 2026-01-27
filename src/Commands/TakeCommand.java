@@ -2,7 +2,7 @@ package Commands;
 
 import Player.Inventory;
 import Player.Player;
-import World.RoomManager;
+import World.*;
 
 public class TakeCommand implements Command{
 
@@ -18,9 +18,15 @@ public class TakeCommand implements Command{
 
     @Override
     public String execute(String[] args) {
+            int currID = player.getRoomID();
 
+           if (args[1].equalsIgnoreCase(roomManager.getItems().get(roomManager.getRooms().get(currID).getItems().get(0)).getName())){
+               inventory.addItem(roomManager.getItems().get(roomManager.getRooms().get(currID).getItems().get(0)));
+           }
 
-        return "";
+//TODO spravit nasypavani veci do inv
+
+        return inventory.toString();
     }
 
     @Override

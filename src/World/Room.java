@@ -1,5 +1,6 @@
 package World;
 
+import Player.Inventory;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,11 +14,11 @@ import java.util.List;
 @NoArgsConstructor
 public class Room {
 
-    private String id;
+    private int id;
     private String name;
     private String description;
     private Connections connections;
-    private List<String> items;
+    private List<Integer> items;
 
 
 }

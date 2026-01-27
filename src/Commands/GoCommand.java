@@ -25,22 +25,15 @@ public class GoCommand implements Command{
 
     @Override
     public String execute(String[] args) {
-        String currID = player.getRoomID();
-        Optional<Room> found = Optional.empty();
-        for (Room e : roomManager.getRooms()) {
-            if (e.getId().equals(currID)) {
-                found = Optional.of(e);
-                break;
-            }
-        }
-        Connections connections  = found.orElseThrow().getConnections();
+
+        Connections connections = roomManager.getRooms().get(player.getRoomID()).getConnections();
 
         Scanner scanner = new Scanner(System.in);
 
         switch (args[1]){
             case "south" -> {
                 if(connections.getSouth() != null){
-                    player.setRoomID(connections.getSouth());
+                    player.setRoomID(connections.getSouthID());
                     player.setCurrentRoomName(roomManager.getRooms().get(connections.getSouthID()).getName());
 
                     finalMessage = ("You walked in " + player.getCurrentRoomName());
@@ -49,7 +42,7 @@ public class GoCommand implements Command{
             }
             case "north" -> {
                 if(connections.getNorth() != null){
-                    player.setRoomID(connections.getNorth());
+                    player.setRoomID(connections.getNorthID());
                     player.setCurrentRoomName(roomManager.getRooms().get(connections.getNorthID()).getName());
 
                     finalMessage = ("You walked in " + player.getCurrentRoomName());
@@ -58,7 +51,7 @@ public class GoCommand implements Command{
             }
             case "east" -> {
                 if(connections.getEast() != null){
-                    player.setRoomID(connections.getEast());
+                    player.setRoomID(connections.getEastID());
                     player.setCurrentRoomName(roomManager.getRooms().get(connections.getEastID()).getName());
 
                     finalMessage = ("You walked in " + player.getCurrentRoomName());
@@ -67,7 +60,7 @@ public class GoCommand implements Command{
             }
             case "west" -> {
                 if(connections.getWest() != null){
-                    player.setRoomID(connections.getWest());
+                    player.setRoomID(connections.getWestID());
                     player.setCurrentRoomName(roomManager.getRooms().get(connections.getWestID()).getName());
 
                     finalMessage = ("You walked in " + player.getCurrentRoomName());

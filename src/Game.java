@@ -17,7 +17,7 @@ public class Game {
         cf.CompSleep(500);
 
         GameConsole gc = new GameConsole();
-        Player p = new Player("yard",GML.getRoomManager());
+        Player p = new Player(1,GML.getRoomManager());
         Inventory inv = new Inventory(3);
 
         /*System.out.println(p.getCurrentRoomName());*/

@@ -1,0 +1,58 @@
+package Commands;
+
+import Player.Player;
+import Util.CompFunc;
+import World.RoomManager;
+
+public class SearchCommand implements Command{
+
+    private RoomManager roomManager;
+    private CompFunc cf = new CompFunc();
+    private Player player;
+
+    public SearchCommand(RoomManager roomManager, Player player){
+        this.roomManager = roomManager;
+        this.player = player;
+    }
+
+    @Override
+    public String execute(String[] args) {
+            int repeat = 0;
+            int currID = player.getRoomID();
+
+        do {
+
+            System.out.print("\rSearching.");
+
+            cf.CompSleep(300);
+
+            System.out.print("\rSearching..");
+
+            cf.CompSleep(300);
+
+            System.out.print("\rSearching...");
+
+            cf.CompSleep(300);
+
+            repeat++;
+        }while(repeat!=3);
+        System.out.println();
+
+        if (roomManager.getRooms().get(currID).getItems().get(0)!=null&&roomManager.getRooms().get(currID).getItems().get(1)!=null){
+            return "You have found:" + " ( " + roomManager.getItems().get(roomManager.getRooms().get(currID).getItems().get(0)).getName() + " | " + roomManager.getItems().get(roomManager.getRooms().get(currID).getItems().get(1)).getName() + " )" ;
+        }
+        if (roomManager.getRooms().get(currID).getItems().get(0)!=null&&roomManager.getRooms().get(currID).getItems().get(1)==null){
+            return "You have found:" + " ( " + roomManager.getItems().get(roomManager.getRooms().get(currID).getItems().get(0)).getName() + " |       )" ;
+        }
+        if (roomManager.getRooms().get(currID).getItems().get(0)==null&&roomManager.getRooms().get(currID).getItems().get(1)!=null){
+            return "You have found:" + " (       | " + roomManager.getItems().get(roomManager.getRooms().get(currID).getItems().get(1)).getName() + " )" ;
+        }
+
+        return "You have found: Nothing";
+    }
+
+    @Override
+    public boolean isExit() {
+        return false;
+    }
+}

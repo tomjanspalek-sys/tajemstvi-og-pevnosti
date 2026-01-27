@@ -25,10 +25,11 @@ public class GameConsole {
         commands.put("stats", new StatsCommand(player, inventory, roomManager));
         commands.put("help", new HelpCommand());
         commands.put("take", new TakeCommand(roomManager, inventory, player));
+        commands.put("search", new SearchCommand(roomManager, player));
     }
 
     public void execute() {
-        System.out.print(">>");
+        System.out.print(">> ");
         String command = scanner.nextLine()+" "+null;
         command = command.trim().toLowerCase();
         String commandInput[]  = command.split(" ");
@@ -42,7 +43,7 @@ public class GameConsole {
     }
 
     public void start(Player player, RoomManager roomManager, Inventory inventory) {
-        inicilization(player, roomManager, null);
+        inicilization(player, roomManager, inventory);
         do {
             execute();
         }while(!isExit);

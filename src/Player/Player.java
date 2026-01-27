@@ -4,23 +4,25 @@ import World.RoomManager;
 
 public class Player {
 
-    private String roomID;
+    private int roomID;
     private String currentRoomName;
 
-    public Player(String startRoom, RoomManager roomManager) {
-        for (int i = 0; i < roomManager.getRooms().size(); i++) {
-            if (roomManager.getRooms().get(i).getId().equals(startRoom)) {
-                currentRoomName = roomManager.getRooms().get(i).getName();
-                roomID = roomManager.getRooms().get(i).getId();
-            }
-        }
+    public Player(int startRoom, RoomManager roomManager) {
+//        for (int i = 0; i < roomManager.getRooms().size(); i++) {
+//            if (roomManager.getRooms().get(i).getId().equals(startRoom)) {
+//                currentRoomName = roomManager.getRooms().get(i).getName();
+//                roomID = roomManager.getRooms().get(i).getId();
+//            }
+//        }
+        currentRoomName = roomManager.getRooms().get(roomID).getName();
+
     }
 
-    public String getRoomID() {
+    public int getRoomID() {
         return roomID;
     }
 
-    public void setRoomID(String roomID) {
+    public void setRoomID(int roomID) {
         this.roomID = roomID;
     }
 

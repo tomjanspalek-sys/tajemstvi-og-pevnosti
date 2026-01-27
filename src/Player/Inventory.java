@@ -16,7 +16,7 @@ public class Inventory {
         return inventory.add(item);
     }
 
-    public void dropItem(Item item) {
+    public void removeItem(Item item) {
         inventory.remove(item);
     }
 
@@ -28,4 +28,9 @@ public class Inventory {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "Inventory{" +
+                "inventory=" + inventory;
+    }
 }

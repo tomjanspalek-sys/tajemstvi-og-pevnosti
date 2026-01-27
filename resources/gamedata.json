@@ -1,6 +1,6 @@
  {
         "rooms": [{
-            "id": "yard",
+            "id": 0,
             "name": "Yard",
             "description": "A spacious yard with a beautiful garden.",
             "connections": {
@@ -13,10 +13,10 @@
                 "west": null,
                 "westID": null
             },
-            "items": [null,null]
+            "items": [0,null]
         },
         {
-            "id": "main_hall",
+            "id": 1,
             "name": "Main Hall",
             "description": "The main hall of the fortress, grand and ornate.",
             "connections": {
@@ -32,7 +32,7 @@
             "items": [null,null]
         },
         {
-            "id": "armory",
+            "id": 2,
             "name": "Armory",
             "description": "A room filled with weapons and armor.",
             "connections": {
@@ -45,10 +45,10 @@
                 "north": null,
                 "northID": null
             },
-            "items": [null,null]
+            "items": [2,null]
         },
         {
-            "id": "library",
+            "id": 3,
             "name": "Library",
             "description": "A quiet library filled with ancient books.",
             "connections": {
@@ -64,7 +64,7 @@
             "items": [null,null]
         },
         {
-            "id": "guard_room",
+            "id": 4,
             "name": "Guard Room",
             "description": "The room where the guards rest and plan.",
             "connections": {
@@ -77,10 +77,10 @@
                 "west": null,
                 "westID": null
             },
-            "items": ["key","sword"]
+            "items": [0,1]
         },
         {
-            "id": "dark_basement",
+            "id": 5,
             "name": "Dark Basement",
             "description": "A mysterious basement shrouded in darkness.",
             "connections": {
@@ -96,7 +96,7 @@
             "items": [null,null]
         },
         {
-            "id": "treasury",
+            "id": 6,
             "name": "Treasury",
             "description": "The treasury filled with gold and jewels.",
             "connections": {
@@ -109,10 +109,10 @@
                 "west": null,
                 "westID": null
             },
-            "items": [null,null]
+            "items": [3,null]
         },
         {
-            "id": "secret_chamber",
+            "id": 7,
             "name": "Secret Chamber",
             "description": "A hidden chamber with ancient artifacts.",
             "connections": {
@@ -125,10 +125,10 @@
                 "west": null,
                 "westID": null
             },
-            "items": [null,null]
+            "items": [4,null]
         },
         {
-            "id": "exit_gate",
+            "id": 8,
             "name": "Exit Gate",
             "description": "The grand exit gate of the fortress.",
             "connections": {
@@ -145,27 +145,33 @@
         }
     ],
     "items": [{
-            "id": "key",
+            "id": 0,
             "name": "Old Key",
             "description": "A rusty old key that looks ancient.",
             "pickupable": true
         },
         {
-            "id": "sword",
+            "id": 1,
             "name": "Silver Sword",
             "description": "A shiny silver sword with intricate engravings.",
             "pickupable": false
         },
         {
-            "id": "torch",
+            "id": 2,
             "name": "Wooden Torch",
             "description": "A torch that can light up dark areas.",
             "pickupable": true
         },
         {
-            "id": "artefact",
+            "id": 3,
             "name": "The OG Artefact",
             "description": "A mysterious artefact from a lost civilization.",
+            "pickupable": true
+        },
+        {
+            "id": 4,
+            "name": "výpečky se zelim",
+            "description": "OMG WHAT'S THAT????",
             "pickupable": true
         }
     ]
