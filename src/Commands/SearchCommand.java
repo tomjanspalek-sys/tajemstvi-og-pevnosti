@@ -24,29 +24,38 @@ public class SearchCommand implements Command{
 
             System.out.print("\rSearching.");
 
-            cf.CompSleep(300);
+            cf.Sleep(300);
 
             System.out.print("\rSearching..");
 
-            cf.CompSleep(300);
+            cf.Sleep(300);
 
             System.out.print("\rSearching...");
 
-            cf.CompSleep(300);
+            cf.Sleep(300);
 
             repeat++;
         }while(repeat!=3);
+
         System.out.println();
 
-        if (roomManager.getRooms().get(currID).getItems().get(0)!=null&&roomManager.getRooms().get(currID).getItems().get(1)!=null){
-            return "You have found:" + " ( " + roomManager.getItems().get(roomManager.getRooms().get(currID).getItems().get(0)).getName() + " | " + roomManager.getItems().get(roomManager.getRooms().get(currID).getItems().get(1)).getName() + " )" ;
-        }
-        if (roomManager.getRooms().get(currID).getItems().get(0)!=null&&roomManager.getRooms().get(currID).getItems().get(1)==null){
-            return "You have found:" + " ( " + roomManager.getItems().get(roomManager.getRooms().get(currID).getItems().get(0)).getName() + " |       )" ;
-        }
-        if (roomManager.getRooms().get(currID).getItems().get(0)==null&&roomManager.getRooms().get(currID).getItems().get(1)!=null){
-            return "You have found:" + " (       | " + roomManager.getItems().get(roomManager.getRooms().get(currID).getItems().get(1)).getName() + " )" ;
-        }
+            for (int i = 0; i < roomManager.getCharacters().size(); i++) {
+                if (roomManager.getCharacters().get(i).getCurrentRoom()==currID){
+                    System.out.println("There's someone you can talk to..");
+                }
+
+            }
+
+
+            if (roomManager.getRooms().get(currID).getItems().get(0)!=null&&roomManager.getRooms().get(currID).getItems().get(1)!=null){
+                return "You have found:" + " ( " + roomManager.getItems().get(roomManager.getRooms().get(currID).getItems().get(0)).getName() + " | " + roomManager.getItems().get(roomManager.getRooms().get(currID).getItems().get(1)).getName() + " )" ;
+            }
+            if (roomManager.getRooms().get(currID).getItems().get(0)!=null&&roomManager.getRooms().get(currID).getItems().get(1)==null){
+                return "You have found:" + " ( " + roomManager.getItems().get(roomManager.getRooms().get(currID).getItems().get(0)).getName() + " |       )" ;
+            }
+            if (roomManager.getRooms().get(currID).getItems().get(0)==null&&roomManager.getRooms().get(currID).getItems().get(1)!=null){
+                return "You have found:" + " (       | " + roomManager.getItems().get(roomManager.getRooms().get(currID).getItems().get(1)).getName() + " )" ;
+            }
 
         return "You have found: Nothing";
     }

@@ -1,15 +1,23 @@
 package World;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+import java.util.List;
+
+@ToString
+@Getter
+@Setter
+@NoArgsConstructor
 public class Character {
 
-    public Character(String name, String dialog) {
-    }
+    private int id;
+    private String name;
+    private String description;
+    private List<String> dialogues;
+    private int currentRoom;
 
-    public String talk() {
-        return null;
-    }
 
-    public String getName() {
-        return null;
-    }
 }

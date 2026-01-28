@@ -2,7 +2,6 @@ import Commands.GameConsole;
 import Player.*;
 import Util.CompFunc;
 import World.GameMapLoader;
-import World.Item;
 
 public class Game {
 
@@ -14,7 +13,7 @@ public class Game {
         GML.Load("resources/gamedata.json");
         System.out.println("Game loaded..");
 
-        cf.CompSleep(500);
+        cf.Sleep(500);
 
         GameConsole gc = new GameConsole();
         Player p = new Player(1,GML.getRoomManager());

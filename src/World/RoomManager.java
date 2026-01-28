@@ -13,5 +13,6 @@ import java.util.List;
 public class RoomManager {
     private List<Room> rooms;
     private List<Item> items;
+    private List<Character> characters;
 
 }

@@ -11,7 +11,7 @@ public class CompFunc {
      * Method for more code compact Thread.sleep()
      * @param duration amount of miliseconds for sleep()
      */
-    public void CompSleep(int duration) {
+    public void Sleep(int duration) {
         this.duration = duration;
 
         try {
@@ -26,7 +26,7 @@ public class CompFunc {
      * Method for more code compact console spacing line
      * @param amount amount of how much lines it will skip
      */
-    public void CompLine(int amount){
+    public void Line(int amount){
         this.amount = amount;
 
         for (int i = 0; i <= amount; i++) {
