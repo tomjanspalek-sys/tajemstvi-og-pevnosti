@@ -1,0 +1,18 @@
+-----------------------------------------------------------
+Items:
+search - starts searching around the location
+take/pick <item> - picks up item
+drop <item> - drops item from inventory in location (wip)
+use <item> - uses item (wip)
+
+Player:
+go <direction> (south, north, west, east) - moves player around the map
+stats - prints player's info (location and his inventory)
+hint - prints hint that leads player, through progress (wip)
+
+NPC:
+talk - starts npc dialogue if avaiable
+
+Game:
+stop/exit - exits the game
+-----------------------------------------------------------

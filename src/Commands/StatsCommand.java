@@ -18,7 +18,7 @@ public class StatsCommand implements Command {
     @Override
     public String execute(String[] args) {
         return "Currently located at: " + player.getCurrentRoomName() + "\n" +
-                "Inventory: " + inventory + "\n" +
+                "Inventory: " + inventory.toString() + "\n" +
                 "-------------------------------------------------------------";
     }
 

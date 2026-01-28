@@ -18,7 +18,7 @@ public class Game {
 
         GameConsole gc = new GameConsole();
         Player p = new Player(1,GML.getRoomManager());
-        Inventory inv = new Inventory(3);
+        Inventory inv = new Inventory();
 
         /*System.out.println(p.getCurrentRoomName());*/
         gc.start(p,GML.getRoomManager(), inv);
