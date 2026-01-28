@@ -1,19 +1,24 @@
 package Player;
 import World.Item;
+import lombok.Getter;
+
 import java.util.ArrayList;
 
 
 public class Inventory {
 
-    private ArrayList<Item> inventory;
-    private int capacity;
-
-    public Inventory(int capacity) {
-        this.capacity = capacity;
-    }
+    @Getter
+    private ArrayList<Item> inventory = new ArrayList<>();
+    private int capacity = 2;
 
     public boolean addItem(Item item) {
-        return inventory.add(item);
+
+        if (!isFull()){
+            return inventory.add(item);
+        }else
+            System.out.println("Can't pickup another item, inventory is full");
+        return false;
+
     }
 
     public void removeItem(Item item) {
@@ -21,16 +26,15 @@ public class Inventory {
     }
 
     public boolean isFull() {
-        if (inventory.size() == capacity) {
-            return true;
-        }
-
-        return false;
+        return inventory.size() == capacity;
     }
 
     @Override
     public String toString() {
-        return "Inventory{" +
-                "inventory=" + inventory;
+        String finalMesg = "";
+        for (int i = 0; i < inventory.size(); i++) {
+            finalMesg = finalMesg + inventory.get(i).getName()+", ";
+        }
+        return finalMesg;
     }
 }

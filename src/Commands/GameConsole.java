@@ -22,10 +22,14 @@ public class GameConsole {
     public void inicilization(Player player, RoomManager roomManager, Inventory inventory) {
         commands.put("go", new GoCommand(player, roomManager));
         commands.put("exit", new StopCommand());
+        commands.put("stop",new StopCommand());
         commands.put("stats", new StatsCommand(player, inventory, roomManager));
         commands.put("help", new HelpCommand());
         commands.put("take", new TakeCommand(roomManager, inventory, player));
+        commands.put("pick", new TakeCommand(roomManager, inventory, player));
         commands.put("search", new SearchCommand(roomManager, player));
+        commands.put("drop", new DropCommand(inventory, roomManager, player));
+
     }
 
     public void execute() {

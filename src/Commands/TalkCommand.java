@@ -12,7 +12,7 @@ public class TalkCommand implements Command{
         this.character = character;
     }
 
-
+//TODO dodelat talk command (ceka na postavy)
     @Override
     public String execute(String[] args) {
         return "";
