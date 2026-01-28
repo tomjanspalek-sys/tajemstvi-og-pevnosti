@@ -69,7 +69,7 @@ public class TakeCommand implements Command{
             if (item1.isPickupable()){
                 inventory.addItem(item1);
                 System.out.println(item1.getDescription());
-                compFunc.CompSleep(500);
+                compFunc.Sleep(500);
                 FinalMessage =  "You picked up: " + item1.getName();
             }else
                 FinalMessage = "You can't pick up this";
@@ -79,7 +79,7 @@ public class TakeCommand implements Command{
                 inventory.addItem(item2);
 
                 System.out.println(item2.getDescription());
-                    compFunc.CompSleep(800);
+                    compFunc.Sleep(800);
                 FinalMessage = "You picked up: " + item2.getName();
             }else
                 FinalMessage = "You can't pick up this";

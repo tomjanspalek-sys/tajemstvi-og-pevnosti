@@ -29,6 +29,7 @@ public class GameConsole {
         commands.put("pick", new TakeCommand(roomManager, inventory, player));
         commands.put("search", new SearchCommand(roomManager, player));
         commands.put("drop", new DropCommand(inventory, roomManager, player));
+        commands.put("talk", new TalkCommand(roomManager, player));
 
     }
 

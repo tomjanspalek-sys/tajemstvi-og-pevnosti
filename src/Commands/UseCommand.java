@@ -1,8 +1,15 @@
 package Commands;
 
+import Player.*;
+import World.RoomManager;
+
 public class UseCommand implements Command{
 
-    //TODO dodelat prikaz use
+    RoomManager roomManager;
+    Player player;
+    Inventory inventory;
+
+    //TODO predpripravit/dodelat prikaz use
     @Override
     public String execute(String[] args) {
         return "";
